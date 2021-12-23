@@ -1,0 +1,157 @@
+- hosts: localhost
+  connection: local
+  gather_facts: true
+
+  vars:
+    osx_script: ./files/osx.sh
+
+    mas_installed_apps:
+      - { id: 405843582, name: "Alfred" }
+      - { id: 441258766, name: "Magnet" }
+      - { id: 1270075435, name: "StrongBox" }
+      - { id: 1221250572, name: "Xnip" }
+
+    homebrew_installed_packages:
+      - argo
+      - argocd
+      - aws-iam-authenticator
+      - bat
+      - catimg # TODO:
+      - cmake
+      - coreutils
+      - datawire/blackbird/telepresence-legacy
+      - direnv
+      - dua-cli
+      - duf
+      - entr
+      - exa
+      - fd
+      - flux
+      - fluxctl
+      - git-delta
+      - git-filter-repo
+      - gitui
+      - gnu-tar
+      - go
+      - helm
+      - hledger
+      - htop
+      - hugo
+      - isync
+      - openjdk@17
+      - openjdk@11
+      - jenv
+      - jq
+      - k6
+      - k9s
+      - kind
+      - kube-linter
+      - kubectx
+      - kubeseal
+      - kubeval
+      - kustomize
+      - lazygit
+      - lf
+      - lua-language-server
+      - luarocks
+      - mdbook
+      - neomutt
+      - neovim
+      - nnn
+      - npm
+      - pandoc
+      - pdfgrep
+      - prettier
+      - pwgen
+      - rcm
+      - ripgrep
+      - shellcheck
+      - stern
+      - tectonic
+      - texlab
+      - hashicorp/tap/terraform-ls
+      - tflint
+      - tig
+      - tmux
+      - tokei
+      - tree
+      - vifm
+      - viu # TODO:
+      - w3m
+      - wget
+      - xclip
+      - yq
+      - zoxide
+
+    homebrew_uninstalled_packages: []
+
+    homebrew_cask_apps:
+      - alt-tab
+      - bartender
+      - calibre
+      - chromium
+      - docker
+      - firefox
+      - google-cloud-sdk
+      - iterm2
+      - karabiner-elements
+      - keepassxc
+      - libreoffice
+      - linearmouse
+      - macfuse # dependecy of telepresence
+      - middle
+      - postman
+      - syncthing
+
+    homebrew_cask_uninstalled_apps: []
+
+    # vars for ansible-role-pip
+    pip_packages:
+      # - "molecule[docker]"
+      # - molecule pynacl build fails
+      - awscli
+      - black
+      - flake8
+      - httpie
+      - ipython
+      - jedi
+      - jedi-language-server
+      - jupyterlab
+      - khal
+      - khard
+      - neovim-remote
+      - pandas
+      - pytest-testinfra
+      - s4cmd
+      - selenium
+      - speedtest-cli
+      - thefuck
+      - urlscan
+      - vdirsyncer
+      - yamllint
+
+    # vars for ansible-role-binaries
+    # these are apps that are either not available with brew
+    # or I require a fixed version
+    kubectl_version: 1.22.0
+    pet_version: 0.4.0
+    tfswitch_version: 0.13.1201
+    binaries:
+      - name: kubectl
+        url: "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/darwin/arm64/kubectl"
+      - name: pet
+        url: "https://github.com/knqyf263/pet/releases/download/v{{ pet_version }}/pet_{{ pet_version }}_darwin_arm64.tar.gz"
+        extract: true
+      - name: tfswitch
+        url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_version}}/terraform-switcher_{{tfswitch_version}}_darwin_arm64.tar.gz"
+        extract: true
+
+  tasks:
+    - import_tasks: tasks/osx.yml
+
+  roles:
+    - geerlingguy.mac.homebrew
+    - geerlingguy.mac.mas
+    - ansible-role-shell
+    - ansible-role-pip
+    - ansible-role-binaries

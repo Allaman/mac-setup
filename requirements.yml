@@ -1,0 +1,17 @@
+---
+roles:
+  - name: ansible-role-shell
+    src: https://github.com/Allaman/ansible-role-shell.git
+    scm: git
+    version: master
+  - name: ansible-role-pip
+    src: https://github.com/Allaman/ansible-role-pip.git
+    scm: git
+    version: main
+  - name: ansible-role-binaries
+    src: https://github.com/Allaman/ansible-role-binaries.git
+    scm: git
+    version: master
+
+collections:
+  - name: geerlingguy.mac
