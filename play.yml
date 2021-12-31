@@ -10,6 +10,7 @@
       - { id: 441258766, name: "Magnet" }
       - { id: 1270075435, name: "StrongBox" }
       - { id: 1221250572, name: "Xnip" }
+      - { id: 824183456, name: "Affinity Photo" }
 
     homebrew_installed_packages:
       - argo
@@ -55,6 +56,7 @@
       - lua-language-server
       - luarocks
       - mdbook
+      - msmtp
       - neomutt
       - neovim
       - nnn
