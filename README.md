@@ -2,7 +2,7 @@
 
 ⚙️ Automatic configuration for my Mac.
 
-ℹ️ Stay [tuned](https://twitter.com/allamann) for my upcoming [blog post](https://rootknecht.net/blog/) about why I switched to Mac after running Lenovo laptops with Linux for a decade.
+ℹ️ Blog post about [moving to macOS](https://rootknecht.net/blog/moving-to-macOS/) after ten years of Linux.
 
 Automatic installation is based upon the following [Ansible](https://www.ansible.com/) roles:
 
@@ -18,6 +18,7 @@ Also kudos to [Jeff Geerling](https://www.jeffgeerling.com/) for his work with [
 
 Bootstrap your system to be able to run Ansible:
 
+- `xcode-select --install`
 - `export PATH=$PATH:$HOME/Library/Python/3.8/bin:/opt/homebrew/bin`
 - `pip3 install --upgrade pip`
 - `pip3 install --user ansible`
@@ -36,6 +37,7 @@ Some apps need to be installed manually
 - Download [TinkerTool](https://www.bresink.biz/download2.php?ln=1&dl=TinkerTool&MBSKey=2b2ed27cad1c358503aac7223b8d345f) for some extra tweaks
 - Download [bartender](https://www.macbartender.com) for a clean bar
 - Chromium cask not working as expected -> [download](https://download-chromium.appspot.com/?platform=Mac_Arm&type=snapshots) manually and run `xattr -cr /Applications/Chromium.app`
+- Download and install [FastRAWViewer](https://www.fastrawviewer.com/)
 - Download and install a patched [font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized) for your terminal
 
 ## Configuration
