@@ -42,4 +42,4 @@ Some apps need to be installed manually
 
 ## Configuration
 
-Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dotfiles)
+Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dotfiles) repo and a private dotfiles repo that contains a script that does the symlinking (via [rcm](https://github.com/thoughtbot/rcm))
