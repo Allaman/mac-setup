@@ -60,6 +60,8 @@
       - neomutt
       - neovim
       - nnn
+      - notmuch
+      - notmuch-mutt
       - npm
       - pandoc
       - pdfgrep
