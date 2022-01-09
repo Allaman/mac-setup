@@ -59,6 +59,7 @@
       - msmtp
       - neomutt
       - neovim
+      - newsboat
       - nnn
       - notmuch
       - notmuch-mutt
@@ -99,6 +100,7 @@
       - google-cloud-sdk
       - iterm2
       - karabiner-elements
+      - kitty
       - keepassxc
       - libreoffice
       - linearmouse
