@@ -11,13 +11,15 @@
       - { id: 1270075435, name: "StrongBox" }
       - { id: 1221250572, name: "Xnip" }
       - { id: 824183456, name: "Affinity Photo" }
+      - { id: 1518425043, name: "Boop" }
+      - { id: 1447043133, name: "CursorPro" }
 
     homebrew_installed_packages:
       - argo
       - argocd
+      - awscli
       - aws-iam-authenticator
       - bat
-      - catimg # TODO:
       - cmake
       - coreutils
       - datawire/blackbird/telepresence-legacy
@@ -29,15 +31,20 @@
       - fd
       - flux
       - fluxctl
+      - gh
       - git-delta
       - git-filter-repo
       - gitui
+      - glow
       - gnu-tar
       - go
+      - golangci-lint
+      - gomodifytags
       - helm
       - hledger
       - htop
       - hugo
+      - imagemagick
       - isync
       - openjdk@17
       - openjdk@11
@@ -57,6 +64,7 @@
       - luarocks
       - mdbook
       - msmtp
+      - mysql-client
       - neomutt
       - neovim
       - newsboat
@@ -81,7 +89,6 @@
       - tokei
       - tree
       - vifm
-      - viu # TODO:
       - w3m
       - wget
       - xclip
@@ -94,18 +101,20 @@
       - alt-tab
       - bartender
       - calibre
-      - chromium
       - docker
       - firefox
       - google-cloud-sdk
+      - google-chrome
       - iterm2
       - karabiner-elements
+      - keycastr
       - kitty
       - keepassxc
       - libreoffice
       - linearmouse
       - macfuse # dependecy of telepresence
       - middle
+      - numi
       - postman
       - syncthing
 
@@ -115,7 +124,6 @@
     pip_packages:
       # - "molecule[docker]"
       # - molecule pynacl build fails
-      - awscli
       - black
       - flake8
       - httpie
@@ -151,6 +159,9 @@
       - name: tfswitch
         url: "https://github.com/warrensbox/terraform-switcher/releases/download/{{tfswitch_version}}/terraform-switcher_{{tfswitch_version}}_darwin_arm64.tar.gz"
         extract: true
+      - name: gh-md-toc
+        url: "https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc"
+        extract: false
 
   tasks:
     - import_tasks: tasks/osx.yml

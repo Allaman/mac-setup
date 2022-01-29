@@ -36,6 +36,8 @@ Some apps need to be installed manually
 
 - Download [TinkerTool](https://www.bresink.biz/download2.php?ln=1&dl=TinkerTool&MBSKey=2b2ed27cad1c358503aac7223b8d345f) for some extra tweaks
 - Download [bartender](https://www.macbartender.com) for a clean bar
+- Download [Minbrowser](https://minbrowser.org/) - a clean browser without any distractions (fix permissions with `xattr -cr /Applications/Min.app`)
+- Download [Forklift3](https://binarynights.com/) - a finder alternative and replacement
 - Chromium cask not working as expected -> [download](https://download-chromium.appspot.com/?platform=Mac_Arm&type=snapshots) manually and run `xattr -cr /Applications/Chromium.app`
 - Download and install [FastRAWViewer](https://www.fastrawviewer.com/)
 - Download and install a patched [font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized) for your terminal
@@ -43,3 +45,10 @@ Some apps need to be installed manually
 ## Configuration
 
 Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dotfiles) repo and a private dotfiles repo that contains a script that does the symlinking (via [rcm](https://github.com/thoughtbot/rcm))
+
+## Replace Finder with Forklift3
+
+```sh
+defaults write -g NSFileViewer -string com.binarynights.ForkLift-3;
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.binarynights.ForkLift-3";}'
+```
