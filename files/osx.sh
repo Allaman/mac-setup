@@ -181,5 +181,12 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+###############################################################################
+# Obsidian.md
+###############################################################################
+
+# enable key repeat for holding keys
+defaults write md.obsidian ApplePressAndHoldEnabled -bool false
+
 
 echo "Restart macbook in order to finalize settings"
