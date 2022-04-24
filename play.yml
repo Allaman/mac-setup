@@ -1,3 +1,4 @@
+---
 - hosts: localhost
   connection: local
   gather_facts: true
@@ -26,6 +27,7 @@
       - coreutils
       - datawire/blackbird/telepresence-legacy
       - direnv
+      - dog
       - dua-cli
       - duf
       - entr
@@ -43,6 +45,7 @@
       - golangci-lint
       - gomodifytags
       - goreleaser
+      - gron
       - helm
       - hledger
       - htop
@@ -71,6 +74,7 @@
       - mdbook
       - msmtp
       - mysql-client
+      - nmap
       - neomutt
       - neovim
       - newsboat
@@ -87,6 +91,7 @@
       - ripgrep
       - shellcheck
       - stern
+      - stylua
       - tectonic
       - texlab
       - hashicorp/tap/terraform-ls
@@ -95,6 +100,7 @@
       - tmux
       - tokei
       - tree
+      - urlview
       - vifm
       - w3m
       - wget
@@ -135,14 +141,15 @@
       - flake8
       - httpie
       - ipython
-      - jedi
-      - jedi-language-server
+      # - jedi
+      # - jedi-language-server
       - jupyterlab
       - khal
       - khard
       - neovim-remote
       - pandas
       - pynvim
+      - pyright
       - pytest-testinfra
       - s4cmd
       - selenium
