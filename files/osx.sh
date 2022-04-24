@@ -33,8 +33,10 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Finder                                                                      #
 ###############################################################################
 
+# Do not show Desktop (Icons)
+defaults write com.apple.finder CreateDesktop -bool FALSE
 # Finder: allow quitting via ? + Q; doing so will also hide desktop icons
-# defaults write com.apple.finder QuitMenuItem -bool true
+defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set home folder as the default location for new Finder windows
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
