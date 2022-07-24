@@ -152,6 +152,9 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
+# Do not attach files with inline preview
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
