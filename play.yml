@@ -49,26 +49,33 @@
       - goreleaser
       - gron
       - hadolint
+      - hashicorp/tap/terraform-ls
       - helm
       - hledger
       - htop
+      - httpie
       - hugo
       - imagemagick
       - infracost
+      - ipython
       - isync
-      - openjdk@17
-      - openjdk@11
       - jenv
       - jq
+      - jupyterlab
       - k6
       - k9s
+      - khal
+      - khard
       - kind
+      - koekeishiya/formulae/skhd
+      - koekeishiya/formulae/yabai
       - kube-linter
       - kubeconform
       - kubectx
       - kubeseal
       - kubeval
       - kustomize
+      - kyverno
       - latexindent
       - lazydocker
       - lazygit
@@ -79,33 +86,35 @@
       - moreutils
       - msmtp
       - mysql-client
-      - nmap
       - neomutt
       - neovim
       - newsboat
+      - nmap
       - nnn
       - notmuch
       - notmuch-mutt
       - npm
+      - openjdk@11
+      - openjdk@17
       - pandoc
       - pdfgrep
-      - pulumi
       - prettier
+      - pulumi
       - pwgen
       - rcm
       - ripgrep
       - shellcheck
-      - koekeishiya/formulae/skhd
+      - sketchybar
       - stern
       - stylua
       - tectonic
       - texlab
-      - hashicorp/tap/terraform-ls
-      - sketchybar
       - tflint
+      - thefuck
       - tig
       - tmux
       - tokei
+      - trash-cli
       - tree
       - urlview
       - vale
@@ -115,7 +124,6 @@
       - w3m
       - wget
       - xclip
-      - koekeishiya/formulae/yabai
       - yq
       - zoxide
 
@@ -145,6 +153,7 @@
       - middle
       - numi
       - postman
+      - stats
       - syncthing
 
     homebrew_cask_uninstalled_apps: []
@@ -153,28 +162,10 @@
     pip_packages:
       # - "molecule[docker]"
       # - molecule pynacl build fails
-      - black
-      - codespell
-      - flake8
-      - httpie
-      - ipython
-      # - jedi
-      # - jedi-language-server
-      - jupyterlab
-      - khal
-      - khard
       - neovim-remote
       - pandas
-      - pynvim
-      - pyright
       - pytest-testinfra
-      - s4cmd
       - selenium
-      - speedtest-cli
-      - thefuck
-      - urlscan
-      - vdirsyncer
-      - yamllint
 
     # vars for ansible-role-binaries
     # these are apps that are either not available with brew
@@ -203,8 +194,8 @@
     - import_tasks: tasks/osx.yml
 
   roles:
-    - geerlingguy.mac.homebrew
-    - geerlingguy.mac.mas
-    - ansible-role-shell
+    # - geerlingguy.mac.homebrew
+    # - geerlingguy.mac.mas
+    # - ansible-role-shell
     - ansible-role-pip
-    - ansible-role-binaries
+    # - ansible-role-binaries
