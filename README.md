@@ -38,9 +38,11 @@ Some apps need to be installed manually
 - Download [bartender](https://www.macbartender.com) for a clean bar
 - Download [Minbrowser](https://minbrowser.org/) - a clean browser without any distractions (fix permissions with `xattr -cr /Applications/Min.app`)
 - Download [Forklift3](https://binarynights.com/) - a finder alternative and replacement
+- Download [CleanShot X](https://cleanshot.com/) - a screen recording tool
 - Chromium cask not working as expected -> [download](https://download-chromium.appspot.com/?platform=Mac_Arm&type=snapshots) manually and run `xattr -cr /Applications/Chromium.app`
 - Download and install [FastRAWViewer](https://www.fastrawviewer.com/)
 - Download and install a patched [font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized) for your terminal
+- Download and install [BetterDisplay](https://github.com/waydabber/BetterDisplay/releases)
 
 ## Configuration
 
