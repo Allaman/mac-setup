@@ -9,7 +9,7 @@
     mas_installed_apps:
       - { id: 405843582, name: "Alfred" }
       - { id: 441258766, name: "Magnet" }
-      - { id: 1270075435, name: "StrongBox" }
+      - { id: 897283731, name: "StrongBox" }
       - { id: 1221250572, name: "Xnip" }
       - { id: 824183456, name: "Affinity Photo" }
       - { id: 1518425043, name: "Boop" }
@@ -37,6 +37,7 @@
       - fd
       - fluxcd/tap/flux
       - fluxctl
+      - fzf
       - gh
       - git-delta
       - git-filter-repo
@@ -88,6 +89,7 @@
       - mysql-client
       - neomutt
       - neovim
+      - neovim-remote
       - newsboat
       - nmap
       - nnn
@@ -105,6 +107,7 @@
       - ripgrep
       - shellcheck
       - sketchybar
+      - slides
       - stern
       - stylua
       - tectonic
@@ -162,7 +165,6 @@
     pip_packages:
       # - "molecule[docker]"
       # - molecule pynacl build fails
-      - neovim-remote
       - pandas
       - pytest-testinfra
       - selenium
@@ -194,8 +196,8 @@
     - import_tasks: tasks/osx.yml
 
   roles:
-    # - geerlingguy.mac.homebrew
-    # - geerlingguy.mac.mas
-    # - ansible-role-shell
+    - geerlingguy.mac.homebrew
+    - geerlingguy.mac.mas
+    - ansible-role-shell
     - ansible-role-pip
-    # - ansible-role-binaries
+    - ansible-role-binaries
