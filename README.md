@@ -35,18 +35,13 @@ Run Ansible with the provided Makefile:
 Some apps need to be installed manually
 
 - Download [TinkerTool](https://www.bresink.biz/download2.php?ln=1&dl=TinkerTool&MBSKey=2b2ed27cad1c358503aac7223b8d345f) for some extra tweaks
-- Download [bartender](https://www.macbartender.com) for a clean bar
-- Download [Minbrowser](https://minbrowser.org/) - a clean browser without any distractions (fix permissions with `xattr -cr /Applications/Min.app`)
-- Download [Forklift3](https://binarynights.com/) - a finder alternative and replacement
-- Download [CleanShot X](https://cleanshot.com/) - a screen recording tool
 - Chromium cask not working as expected -> [download](https://download-chromium.appspot.com/?platform=Mac_Arm&type=snapshots) manually and run `xattr -cr /Applications/Chromium.app`
 - Download and install [FastRAWViewer](https://www.fastrawviewer.com/)
 - Download and install a patched [font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized) for your terminal
-- Download and install [BetterDisplay](https://github.com/waydabber/BetterDisplay/releases)
 
 ## Configuration
 
-Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dotfiles) repo and a private dotfiles repo that contains a script that does the symlinking (via [rcm](https://github.com/thoughtbot/rcm))
+Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dots) repo and a private dotfiles repo using [chezmoi](https://www.chezmoi.io/)
 
 ## Replace Finder with Forklift3
 
