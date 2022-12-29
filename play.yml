@@ -17,7 +17,8 @@
       - { id: 1444383602, name: "GoodNotes 5" }
       - { id: 905953485, name: "NordVPN" }
       - { id: 824171161, name: "Affinity Designer" }
-      - { id, 881418622, name: "Affinity Publisher" }
+      - { id: 881418622, name: "Affinity Publisher" }
+      - { id: 1534275760, name: "Languagetool" }
 
     homebrew_installed_packages:
       - alacritty
@@ -48,6 +49,7 @@
       - go
       - golangci-lint
       - gomodifytags
+      - gopass
       - goreleaser
       - gron
       - hadolint
@@ -142,10 +144,13 @@
     homebrew_cask_apps:
       - alt-tab
       - bartender
+      - betterdisplay # more display options
       - calibre
+      - cleanshot # screen recording
       - docker
       - firefox
       - font-hack-nerd-font
+      - forklift # finder alternative
       - google-cloud-sdk
       - google-chrome
       - handbrake
@@ -155,13 +160,15 @@
       - kitty
       - keepassxc
       - libreoffice
-      - linearmouse
       - macfuse # dependecy of telepresence
       - middle
+      - min # minimal browser with no distractions
+      - mouse-fix # fix scrolling for external mice
       - numi
       - postman
       - stats
       - syncthing
+      - skim # pdf viewer for vim-latex
 
     homebrew_cask_uninstalled_apps: []
 
@@ -178,7 +185,7 @@
     # or I require a fixed version
     kubectl_version: 1.22.0
     pet_version: 0.4.0
-    tfswitch_version: 0.13.1201
+    tfswitch_version: 0.13.1300
     goMarkableClient_version: 0.6.4
     binaries:
       - name: kubectl
