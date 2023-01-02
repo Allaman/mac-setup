@@ -176,7 +176,6 @@
     pip_packages:
       # - "molecule[docker]"
       # - molecule pynacl build fails
-      - pandas
       - pytest-testinfra
       - selenium
 
