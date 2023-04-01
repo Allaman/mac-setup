@@ -82,7 +82,6 @@
       - kubectx
       - kubeseal
       - kubeval
-      - kustomize
       - kyverno
       - latexindent
       - lazydocker
@@ -193,7 +192,11 @@
     pet_version: 0.4.0
     tfswitch_version: 0.13.1300
     goMarkableClient_version: 0.6.4
+    kustomize_version: v4.5.7
     binaries:
+      - name: kustomize
+        url: https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F{{ kustomize_version }}/kustomize_{{ kustomize_version }}_darwin_arm64.tar.gz
+        extract: true
       - name: kubectl
         url: "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/darwin/arm64/kubectl"
       - name: pet
