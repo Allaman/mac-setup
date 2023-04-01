@@ -9,7 +9,7 @@ Automatic installation is based upon the following [Ansible](https://www.ansible
 - [geerlingguy.homebrew](https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/homebrew) manages homebrew installation and packages
 - [geerlingguy.mas](https://github.com/geerlingguy/ansible-collection-mac/tree/master/roles/mas) manages apps from the app store
 - [ansible-role-binaries](https://github.com/Allaman/ansible-role-binaries) installs binaries
-- [ansible-role-shell](https://github.com/Allaman/ansible-role-shell) configures my shell
+- [ansible-role-dotfiles](https://github.com/Allaman/ansible-role-dotfiles) configures my shell/dots
 - [ansible-role-pip](https://github.com/Allaman/ansible-role-pip) installs pip packages
 
 Also kudos to [Jeff Geerling](https://www.jeffgeerling.com/) for his work with [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) which obviously influenced my setup.
@@ -38,10 +38,11 @@ Some apps need to be installed manually
 - Chromium cask not working as expected -> [download](https://download-chromium.appspot.com/?platform=Mac_Arm&type=snapshots) manually and run `xattr -cr /Applications/Chromium.app`
 - Download and install [FastRAWViewer](https://www.fastrawviewer.com/)
 - Download and install a patched [font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized) for your terminal
+- Download and install [AlDente Pro](https://apphousekitchen.com/)
 
 ## Configuration
 
-Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dots) repo and a private dotfiles repo using [chezmoi](https://www.chezmoi.io/)
+Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dots) repo via [ansible-roles-dotfiles](https://github.com/Allaman/ansible-role-dotfiles) and a private dotfiles repo, both using [chezmoi](https://www.chezmoi.io/) under the hood.
 
 ## Replace Finder with Forklift3
 
