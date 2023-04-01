@@ -22,14 +22,17 @@
 
     homebrew_installed_packages:
       - alacritty
+      - ansible-lint
       - argo
       - argocd
+      - azure-cli
       - awscli
       - bat
       - cmake
       - coreutils
       - datawire/blackbird/telepresence-legacy
       - direnv
+      - dive
       - dog
       - dua-cli
       - duf
@@ -88,6 +91,7 @@
       - lua-language-server
       - luarocks
       - mdbook
+      - miller
       - mitmproxy
       - moreutils
       - msmtp
@@ -110,6 +114,7 @@
       - pwgen
       - rcm
       - ripgrep
+      - session-manager-plugin
       - shellcheck
       - sketchybar
       - slides
@@ -133,6 +138,7 @@
       - wget
       - xclip
       - yq
+      - yt-dlp
       - zoxide
 
     homebrew_uninstalled_packages: []
@@ -169,6 +175,7 @@
       - stats
       - syncthing
       - skim # pdf viewer for vim-latex
+      - vscodium
 
     homebrew_cask_uninstalled_apps: []
 
@@ -201,6 +208,11 @@
       - name: goMarkableClient
         url: "https://github.com/owulveryck/goMarkableStream/releases/download/v{{goMarkableClient_version}}/goMarkableClient_{{goMarkableClient_version}}_Darwin_arm64.tar.gz"
         extract: true
+      # NOTE: No developing anymore
+      - name: remouseable
+        url: "https://github.com/kevinconway/remouseable/releases/download/v0.4.0/osx"
+        bin_name: osx
+        extract: false
 
   tasks:
     - import_tasks: tasks/osx.yml
