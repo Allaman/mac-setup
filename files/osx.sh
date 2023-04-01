@@ -192,6 +192,6 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # enable key repeat for holding keys
 defaults write md.obsidian ApplePressAndHoldEnabled -bool false
-
+defaults write -app VSCodium ApplePressAndHoldEnabled -bool false
 
 echo "Restart macbook in order to finalize settings"
