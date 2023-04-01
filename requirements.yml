@@ -1,7 +1,7 @@
 ---
 roles:
-  - name: ansible-role-shell
-    src: https://github.com/Allaman/ansible-role-shell.git
+  - name: ansible-role-dotfiles
+    src: https://github.com/Allaman/ansible-role-dotfiles
     scm: git
     version: master
   - name: ansible-role-pip

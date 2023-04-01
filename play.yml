@@ -223,6 +223,6 @@
   roles:
     - geerlingguy.mac.homebrew
     - geerlingguy.mac.mas
-    - ansible-role-shell
+    - ansible-role-dotfiles
     - ansible-role-pip
     - ansible-role-binaries
