@@ -37,7 +37,7 @@
       - dua-cli
       - duf
       - entr
-      - exa
+      - eza
       - fd
       - findutils
       - fluxcd/tap/flux
