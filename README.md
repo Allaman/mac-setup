@@ -44,9 +44,11 @@ Some apps need to be installed manually
 
 Configuration is mainly done via my [dotfiles](https://github.com/Allaman/dots) repo via [ansible-roles-dotfiles](https://github.com/Allaman/ansible-role-dotfiles) and a private dotfiles repo, both using [chezmoi](https://www.chezmoi.io/) under the hood.
 
-## Replace Finder with Forklift3
+## Replace Finder with Forklift4
+
+[Docs](https://binarynights.com/manual)
 
 ```sh
-defaults write -g NSFileViewer -string com.binarynights.ForkLift-3;
-defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.binarynights.ForkLift-3";}'
+defaults write -g NSFileViewer -string com.binarynights.ForkLift;
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add '{LSHandlerContentType="public.folder";LSHandlerRoleAll="com.binarynights.ForkLift";}'
 ```

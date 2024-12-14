@@ -33,8 +33,9 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Finder                                                                      #
 ###############################################################################
 
-# Do not show Desktop (Icons)
-defaults write com.apple.finder CreateDesktop -bool FALSE
+# Do show Desktop (Icons)
+# https://github.com/koekeishiya/yabai/issues/2313#issuecomment-2225438696
+defaults write com.apple.finder CreateDesktop -bool true
 # Finder: allow quitting via ? + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
@@ -160,13 +161,13 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 ###############################################################################
 
 if [[ "$RUN_AS_ROOT" = true ]]; then
-	# Disable Spotlight indexing for any volume that gets mounted and has not yet
-	# been indexed before.
-	# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-	sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+  # Disable Spotlight indexing for any volume that gets mounted and has not yet
+  # been indexed before.
+  # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
+  sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
-	# Restart spotlight
-	killall mds >/dev/null 2>&1
+  # Restart spotlight
+  killall mds >/dev/null 2>&1
 fi
 
 ###############################################################################

@@ -7,18 +7,19 @@
     osx_script: ./files/osx.sh
 
     mas_installed_apps:
-      - { id: 405843582, name: "Alfred" }
-      - { id: 441258766, name: "Magnet" }
-      - { id: 897283731, name: "StrongBox" }
-      - { id: 1221250572, name: "Xnip" }
-      - { id: 824183456, name: "Affinity Photo" }
-      - { id: 1518425043, name: "Boop" }
-      - { id: 1447043133, name: "CursorPro" }
-      - { id: 1444383602, name: "GoodNotes 5" }
-      - { id: 905953485, name: "NordVPN" }
-      - { id: 824171161, name: "Affinity Designer" }
-      - { id: 881418622, name: "Affinity Publisher" }
-      - { id: 1534275760, name: "Languagetool" }
+      - {id: 405843582, name: "Alfred"}
+      - {id: 441258766, name: "Magnet"}
+      - {id: 897283731, name: "StrongBox"}
+      - {id: 1221250572, name: "Xnip"}
+      - {id: 824183456, name: "Affinity Photo"}
+      - {id: 1518425043, name: "Boop"}
+      - {id: 1447043133, name: "CursorPro"}
+      - {id: 1444383602, name: "GoodNotes 5"}
+      - {id: 905953485, name: "NordVPN"}
+      - {id: 824171161, name: "Affinity Designer"}
+      - {id: 881418622, name: "Affinity Publisher"}
+      - {id: 1534275760, name: "Languagetool"}
+      - {id: 1661733229, name: "localsend",}
 
     homebrew_installed_packages:
       - alacritty
@@ -28,11 +29,14 @@
       - azure-cli
       - awscli
       - bat
+      - charmbracelet/tap/freeze
       - cmake
       - coreutils
+      - dasel # json/yaml manipulation
       - datawire/blackbird/telepresence-legacy
       - direnv
       - dive
+      - docker-compose
       - dog
       - dua-cli
       - duf
@@ -40,8 +44,8 @@
       - eza
       - fd
       - findutils
-      - fluxcd/tap/flux
       - fluxctl
+      - fx # Terminal JSON viewer and processor
       - fzf
       - gh
       - git-delta
@@ -50,11 +54,15 @@
       - glow
       - gnu-tar
       - go
+      - go-task/tap/go-task
       - golangci-lint
       - gomodifytags
       - gopass
+      - jandedobbeleer/oh-my-posh/oh-my-posh
       - goreleaser
       - gron
+      - gum
+      - graphviz
       - hadolint
       - hashicorp/tap/terraform-ls
       - helm
@@ -63,11 +71,13 @@
       - httpie
       - hugo
       - hurl
+      - jordanbaird-ice
       - imagemagick
       - infracost
       - ipython
       - isync
       - jenv
+      - jnv
       - jq
       - jupyterlab
       - k6
@@ -78,11 +88,9 @@
       - koekeishiya/formulae/skhd
       - koekeishiya/formulae/yabai
       - kube-linter
-      - kubeconform
       - kubectx
       - kubeseal
       - kubeval
-      - kyverno
       - latexindent
       - lazydocker
       - lazygit
@@ -118,19 +126,25 @@
       - sketchybar
       - slides
       - stern
+      - saulpw/vd/visidata
       - stylua
       - tectonic
       - terraform-docs
       - texlab
       - tflint
+      - tfsec
       - tig
+      - tlcr
       - tmux
       - tokei
       - trash-cli
       - tree
+      - trivy
+      - typst
       - urlview
       - vale
       - vdirsyncer
+      - vhs
       - viddy
       - vifm
       - w3m
@@ -175,6 +189,8 @@
       - syncthing
       - skim # pdf viewer for vim-latex
       - vscodium
+      - watchexec # Executes commands in response to file modifications
+      - wezterm # GPU accelerated terminal
 
     homebrew_cask_uninstalled_apps: []
 
@@ -188,12 +204,31 @@
     # vars for ansible-role-binaries
     # these are apps that are either not available with brew
     # or I require a fixed version
-    kubectl_version: 1.22.0
-    pet_version: 0.4.0
-    tfswitch_version: 0.13.1300
-    goMarkableClient_version: 0.6.4
-    kustomize_version: v4.5.7
+    kubectl_version: 1.26.0
+    pet_version: 0.8.4
+    tfswitch_version: 0.13.1308
+    kustomize_version: v5.3.0
+    kubeconform_version: v0.6.6
+    kyverno_version: v1.10.5
+    pkl_version: 0.25.2
+    flux_version: 2.2.3
     binaries:
+      - name: mani
+        url: https://github.com/alajmo/mani/releases/download/v0.25.0/mani_0.25.0_darwin_arm64.tar.gz
+        extract: true
+      - name: pkl
+        url: https://github.com/apple/pkl/releases/download/{{ pkl_version }}/pkl-macos-aarch64
+        extract: false
+        bin_name: pkl-macos-aarch64
+      - name: kyverno
+        url: https://github.com/kyverno/kyverno/releases/download/{{ kyverno_version }}/kyverno-cli_{{ kyverno_version }}_darwin_arm64.tar.gz
+        extract: true
+      - name: kubeconform
+        url: https://github.com/yannh/kubeconform/releases/download/{{ kubeconform_version }}/kubeconform-darwin-arm64.tar.gz
+        extract: true
+      - name: flux
+        url: https://github.com/fluxcd/flux2/releases/download/v{{ flux_version }}/flux_{{ flux_version}}_darwin_arm64.tar.gz
+        extract: true
       - name: kustomize
         url: https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F{{ kustomize_version }}/kustomize_{{ kustomize_version }}_darwin_arm64.tar.gz
         extract: true
@@ -208,21 +243,13 @@
       - name: gh-md-toc
         url: "https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc"
         extract: false
-      - name: goMarkableClient
-        url: "https://github.com/owulveryck/goMarkableStream/releases/download/v{{goMarkableClient_version}}/goMarkableClient_{{goMarkableClient_version}}_Darwin_arm64.tar.gz"
-        extract: true
-      # NOTE: No developing anymore
-      - name: remouseable
-        url: "https://github.com/kevinconway/remouseable/releases/download/v0.4.0/osx"
-        bin_name: osx
-        extract: false
 
   tasks:
-    - import_tasks: tasks/osx.yml
+  # - import_tasks: tasks/osx.yml
 
   roles:
-    - geerlingguy.mac.homebrew
-    - geerlingguy.mac.mas
-    - ansible-role-dotfiles
-    - ansible-role-pip
+    # - geerlingguy.mac.homebrew
+    # - geerlingguy.mac.mas
+    # - ansible-role-dotfiles
+    # - ansible-role-pip
     - ansible-role-binaries
